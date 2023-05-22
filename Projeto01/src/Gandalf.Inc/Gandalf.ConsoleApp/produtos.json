@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Id": 1,
+    "Nome": "24 polegadas",
+    "Marca": "LG",
+    "Categoria": "Televisao"
+  },
+  {
+    "Id": 2,
+    "Nome": "Playstation 5",
+    "Marca": "SONY",
+    "Categoria": "Playstation"
+  },
+  {
+    "Id": 3,
+    "Nome": "Geladeira ",
+    "Marca": "LG",
+    "Categoria": "Geladeira"
+  },
+  {
+    "Id": 4,
+    "Nome": "Microondas",
+    "Marca": "LG",
+    "Categoria": "Microondas"
+  },
+  {
+    "Id": 5,
+    "Nome": "50 polegadas",
+    "Marca": "LG",
+    "Categoria": "Televisao"
+  }
+]

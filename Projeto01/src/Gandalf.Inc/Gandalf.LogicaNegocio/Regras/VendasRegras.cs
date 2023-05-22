@@ -1,4 +1,5 @@
 ﻿using Gandalf.LogicaNegocio.Modelo;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
@@ -83,20 +84,16 @@ namespace Gandalf.LogicaNegocio.Regras
 
         public void SalvarVenda()
         {
-            var caminho = @"c:\temp\Vendas\"; //Deveria vir do App.Config
-            var arquivo = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
+            var arquivoTxt = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
+            var arquivoJson = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".json";
 
             if (ValidarVenda())
             {
                 Console.WriteLine(Venda.ToString());
+                File.WriteAllText($"{arquivoTxt}", Venda.ToString());
 
-
-                //if (!Directory.Exists(caminho))
-                //{
-                //    Directory.CreateDirectory(caminho);
-                //}
-
-                //File.WriteAllText($"{caminho}{arquivo}", Venda.ToString());
+                string json = JsonConvert.SerializeObject(Venda);
+                File.WriteAllText($"{arquivoJson}",json);
             }
         }
     }
