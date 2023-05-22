@@ -1,0 +1,40 @@
+﻿{
+  "Disponibilidade": [
+    {
+      "Produto": {
+        "Id": 1,
+        "Nome": "24 polegadas",
+        "Marca": "LG",
+        "Categoria": "Televisao"
+      },
+      "Quantidade": 10
+    },
+    {
+      "Produto": {
+        "Id": 2,
+        "Nome": "Playstation 5",
+        "Marca": "SONY",
+        "Categoria": "Playstation"
+      },
+      "Quantidade": 5
+    },
+    {
+      "Produto": {
+        "Id": 3,
+        "Nome": "Geladeira ",
+        "Marca": "LG",
+        "Categoria": "Geladeira"
+      },
+      "Quantidade": 2
+    },
+    {
+      "Produto": {
+        "Id": 4,
+        "Nome": "Microondas ",
+        "Marca": "Samsung",
+        "Categoria": "Microondas"
+      },
+      "Quantidade": 2
+    }
+  ]
+}

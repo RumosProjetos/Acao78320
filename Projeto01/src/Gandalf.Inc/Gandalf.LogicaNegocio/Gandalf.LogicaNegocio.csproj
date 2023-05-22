@@ -49,6 +49,7 @@
     <Compile Include="Modelo\Item.cs" />
     <Compile Include="Modelo\Morada.cs" />
     <Compile Include="Modelo\Produto.cs" />
+    <Compile Include="Modelo\ProdutoQuantidade.cs" />
     <Compile Include="Modelo\Utilizador.cs" />
     <Compile Include="Modelo\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,12 +1,8 @@
 ﻿using Gandalf.LogicaNegocio.Modelo;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics.SymbolStore;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gandalf.LogicaNegocio.Regras
 {
@@ -70,7 +66,7 @@ namespace Gandalf.LogicaNegocio.Regras
 
             foreach (var item in Venda.Itens)
             {
-                var quantidadeDisponivel = Estoque.Disponibilidade.FirstOrDefault(x => x.Key == item.Produto).Value;
+                var quantidadeDisponivel = Estoque.Disponibilidade.FirstOrDefault(x => x.Produto == item.Produto).Quantidade;
                 if (quantidadeDisponivel <= item.Quantidade)
                 {
                     retorno = false;

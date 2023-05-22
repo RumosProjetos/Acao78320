@@ -3,19 +3,15 @@ using Gandalf.LogicaNegocio.Modelo;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Gandalf.ConsoleApp.Telas
 {
     public static class TelaVenda
     {
         private static List<Produto> ProdutosSelecionados;
+        private static Estoque listaProdutosEmEstoque;
 
         public static void ExibirTelaInicio(List<Produto> produtosSelecionados = null)
         {
@@ -78,7 +74,7 @@ namespace Gandalf.ConsoleApp.Telas
                 {
                     if (comando == "4")
                     {
-                        CarrinhoCompras.ExibirTelaInicio(ProdutosSelecionados);
+                        CarrinhoCompras.ExibirTelaInicio(ProdutosSelecionados, listaProdutosEmEstoque);
                     }
                 }
             }
@@ -87,10 +83,8 @@ namespace Gandalf.ConsoleApp.Telas
         public static void ExibirTelaBuscaProdutos(TipoBusca tipoBusca)
         {
             Console.Clear();
-            //TODO: Resolver questão do estoque no JSON
-            List<Produto> listaProdutos = new List<Produto>();
-            string ConteudoDosProdutos = File.ReadAllText("produtos.json");
-            listaProdutos = JsonConvert.DeserializeObject<List<Produto>>(ConteudoDosProdutos);
+            string ConteudoDosProdutos = File.ReadAllText("estoque.json");
+            listaProdutosEmEstoque = JsonConvert.DeserializeObject<Estoque>(ConteudoDosProdutos);
 
             Console.WriteLine("-------------");
             string tipoBuscaTexto = "Nome";
@@ -110,23 +104,23 @@ namespace Gandalf.ConsoleApp.Telas
             //BUG: Está pegando apenas o último produto encontrado
             //Solucao: Pegar por ID ou qualquer coisa que identifique um objeto específico
             //Possivelmente adicionar outra tela intermediária para selecao
-            foreach (Produto produto in listaProdutos)
+            foreach (ProdutoQuantidade produto in listaProdutosEmEstoque.Disponibilidade)
             {
-                if (tipoBusca == TipoBusca.Nome && produto.Nome.ToLower().Trim() == termoProcurado)
+                if (tipoBusca == TipoBusca.Nome && produto.Produto.Nome.ToLower().Trim() == termoProcurado)
                 {
-                    produtoSelecionado = produto;
+                    produtoSelecionado = produto.Produto;
                 }
                 else
                 {
-                    if (tipoBusca == TipoBusca.Marca && produto.Marca.ToLower().Trim() == termoProcurado)
+                    if (tipoBusca == TipoBusca.Marca && produto.Produto.Marca.ToLower().Trim() == termoProcurado)
                     {
-                        produtoSelecionado = produto;
+                        produtoSelecionado = produto.Produto;
                     }
                     else
                     {
-                        if (tipoBusca == TipoBusca.Categoria && produto.Categoria.ToLower().Trim() == termoProcurado)
+                        if (tipoBusca == TipoBusca.Categoria && produto.Produto.Categoria.ToLower().Trim() == termoProcurado)
                         {
-                            produtoSelecionado = produto;
+                            produtoSelecionado = produto.Produto;
                         }
                     }
                 }

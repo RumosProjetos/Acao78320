@@ -6,8 +6,8 @@ namespace Gandalf.LogicaNegocio.Modelo
     {
         public Estoque()
         {
-            Disponibilidade = new Dictionary<Produto, int>();
+            Disponibilidade = new List<ProdutoQuantidade>();
         }
-        public Dictionary<Produto, int> Disponibilidade { get; set; }
+        public List<ProdutoQuantidade> Disponibilidade { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace Gandalf.Tests
             Produto produtoIndiferente = new Produto();
 
             Estoque estoque = new Estoque();
-            estoque.Disponibilidade.Add(produtoIndiferente, 0);
+            estoque.Disponibilidade.Add(new ProdutoQuantidade(produtoIndiferente, 0));
 
             Venda venda = new Venda { 
                 Itens = new List<Item>(),
@@ -45,7 +45,7 @@ namespace Gandalf.Tests
             //Arrange
             Produto produtoIndiferente = new Produto();
             Estoque estoque = new Estoque();
-            estoque.Disponibilidade.Add(produtoIndiferente, 0);
+            estoque.Disponibilidade.Add(new ProdutoQuantidade(produtoIndiferente, 0));
 
             Venda venda = new Venda
             {
@@ -70,7 +70,7 @@ namespace Gandalf.Tests
             //Arrange
             Produto produtoIndiferente = new Produto();
             Estoque estoque = new Estoque();
-            estoque.Disponibilidade.Add(produtoIndiferente, 0);
+            estoque.Disponibilidade.Add(new ProdutoQuantidade(produtoIndiferente, 0));
 
             Venda venda = new Venda
             {

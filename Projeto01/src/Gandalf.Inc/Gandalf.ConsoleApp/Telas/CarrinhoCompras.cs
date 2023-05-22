@@ -2,19 +2,20 @@
 using Gandalf.LogicaNegocio.Regras;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gandalf.ConsoleApp.Telas
 {
     public static class CarrinhoCompras
     {
         private static List<Produto> ProdutosSelecionados;
+        private static Estoque Estoque;
 
-        public static void ExibirTelaInicio(List<Produto> produtosSelecionados)
+        public static void ExibirTelaInicio(List<Produto> produtosSelecionados, Estoque estoque)
         {
             Console.Clear();
+            ProdutosSelecionados = produtosSelecionados;
+            Estoque = estoque;
+
             Console.WriteLine("Gandalf.Inc");
             Console.WriteLine("-------------");
             Console.WriteLine("Ponto de Venda");
@@ -27,9 +28,8 @@ namespace Gandalf.ConsoleApp.Telas
             foreach (var item in produtosSelecionados)
             {
                 Console.WriteLine(item.ToString());
-            }
+            }           
 
-            ProdutosSelecionados = produtosSelecionados;
             string comando = Console.ReadLine();
 
             if (comando == "x")
@@ -65,23 +65,19 @@ namespace Gandalf.ConsoleApp.Telas
             };
 
             venda.Itens = new List<Item>();
-            var estoque = new Estoque();
 
             foreach (var item in ProdutosSelecionados)
             {
-                var quantidade = new Random().Next();
+                var quantidade = 1;
 
                 venda.Itens.Add(new Item { 
                     Produto = item, 
                     Quantidade = quantidade, 
                     ValorUnitario = (decimal)new Random().NextDouble() 
                 });
-
-                estoque.Disponibilidade.Add(item, quantidade * 10);
             }
 
-
-            var regraVendas = new VendasRegras(venda, estoque);
+            var regraVendas = new VendasRegras(venda, Estoque);
             regraVendas.SalvarVenda();
         }
     }
