@@ -1,4 +1,4 @@
-##[Comandos usados no Entity Framework](https://zetbit.tech/categories/asp-dot-net-core/31/6-common-used-migration-commands-in-entity-framework)
+## [Comandos usados no Entity Framework](https://zetbit.tech/categories/asp-dot-net-core/31/6-common-used-migration-commands-in-entity-framework)
 
 - Add-Migration
 - Update-Database
@@ -7,7 +7,7 @@
 - Get-Migrations
 - Script-Migration
 
-  ##Solução para o Bug do SQL Server 
+  ## Solução para o Bug do SQL Server 
 - sqllocaldb info
 - https://dba.stackexchange.com/questions/286185/can-no-longer-connect-to-localdb-after-updating-from-sql-server-2016-to-2019
   
