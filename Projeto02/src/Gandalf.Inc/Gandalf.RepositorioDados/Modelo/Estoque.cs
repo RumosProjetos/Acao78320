@@ -7,8 +7,8 @@ namespace Gandalf.RepositorioDados.Modelo
     {
         [Key]
         public int Id { get; set; }
-        public Produto Produto { get; set; }
-        public Loja Loja { get; set; }
+        public virtual Produto Produto { get; set; }
+        public virtual Loja Loja { get; set; }
         public int Quantidade { get; set; }
         public int QuantidadeBase { get; set; }
         public string UnidadeVenda { get; set; }

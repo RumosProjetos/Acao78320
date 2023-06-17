@@ -11,11 +11,11 @@ namespace Gandalf.RepositorioDados.Modelo
     {
         [Key]
         public int Id { get; set; }
-        public Venda Venda { get; set; }
+        public virtual Venda Venda { get; set; }
         public decimal ValorPago { get; set; }
-        public TipoPagamento TipoPagamento { get; set; }
+        public virtual TipoPagamento TipoPagamento { get; set; }
         public DateTime DataCriacao { get; set; }
-        public Loja Loja { get; set; }
+        public virtual Loja Loja { get; set; }
     }
 }
 

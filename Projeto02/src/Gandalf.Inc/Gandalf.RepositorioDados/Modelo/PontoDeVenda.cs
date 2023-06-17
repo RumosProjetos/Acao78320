@@ -6,7 +6,7 @@ namespace Gandalf.RepositorioDados.Modelo
     {
         [Key]
         public int Id { get; set; }
-        public Loja Loja { get; set; }
+        public virtual Loja Loja { get; set; }
         public string Localizacao { get; set; }
     }
 }

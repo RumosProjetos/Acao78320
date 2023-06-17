@@ -9,7 +9,7 @@ namespace Gandalf.RepositorioDados.Modelo
         public int Id { get; set; }
         public string Nome { get; set; }
         public string CodigoBarras { get; set; }
-        public Categoria Categoria { get; set; }
+        public virtual Categoria Categoria { get; set; }
         public string UnidadeMedida { get; set; }
         public int QuantidadePorUnidade { get; set; }
         public decimal PrecoUnitario { get; set; }
