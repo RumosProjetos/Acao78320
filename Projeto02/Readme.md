@@ -7,9 +7,9 @@
 - Get-Migrations
 - Script-Migration
 
-  ## Solução para o Bug do SQL Server 
+## Solução para o Bug do SQL Server 
 - sqllocaldb info
-- https://dba.stackexchange.com/questions/286185/can-no-longer-connect-to-localdb-after-updating-from-sql-server-2016-to-2019
+- [Comandos a Executar](https://dba.stackexchange.com/questions/286185/can-no-longer-connect-to-localdb-after-updating-from-sql-server-2016-to-2019)
   
 - sqllocaldb stop MSSQLLocalDB
 - sqllocaldb delete MSSQLLocalDB
