@@ -1,0 +1,8 @@
+Exemplos Bootstrap - https://bootswatch.com/cerulean/
+Datatable - https://datatables.net/
+JQuery - https://jquery.com/
+JqueryTutorial - https://www.w3schools.com/jquery/
+Google Charts - https://developers.google.com/chart/
+			  -	hhttps://developers.google.com/chart/interactive/docs/gallery?hl=pt-br
+
+

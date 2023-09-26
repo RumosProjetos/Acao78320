@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Gandalf.Inc - Clientes</title>
+    <link href="../css/geral.css" rel="stylesheet" />
+    <script src="../script/geral.js"></script>
+</head>
+<body>
+    <script>
+        UsuarioLogado();
+    </script>
+
+    <nav>
+        <div>
+            <span class="titulo">
+                Gandalf.Inc Backoffice
+            </span>
+            <span>
+                <img src="../img/logo.jpg" class="logo" alt="Logo do Gandalf.Inc" />
+            </span>
+        </div>
+    </nav>
+    <main>
+        <h1>Clientes</h1>
+
+        <form>
+            <fieldset>
+                <div>
+                    <label for="txtNome">Nome</label>
+                    <input type="text" name="txtNome" value="" />
+                </div>
+                <div>
+                    <label for="txtDataNascimento">Data de Nascimento</label>
+                    <input type="date" name="txtDataNascimento" value="" />
+                </div>
+                <div>
+                    <label for="txtNif">Número de Identificação Fiscal</label>
+                    <input type="text" name="txtNif" value="" />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div>
+                    <label for="txtEndereco">Endereço</label>
+                    <input type="text" name="txtEndereco" value="" />
+                </div>
+                <div>
+                    <label for="txtCidade">Cidade</label>
+                    <input type="date" name="txtCidade" value="" />
+                </div>
+                <div>
+                    <label for="txtEmail">Endereço Eletrônico</label>
+                    <input type="email" name="txtEmail" value="" />
+                </div>
+            </fieldset>
+
+
+            <input type="button" value="Salvar" onclick="alert('Falta implementar')"/>
+        </form>
+
+    </main>
+
+    <footer>
+        Gandalf.Inc - Todos os direitos reservados
+    </footer>
+
+    <script>
+        ObterClientes();
+    </script>
+
+
+</body>
+</html>

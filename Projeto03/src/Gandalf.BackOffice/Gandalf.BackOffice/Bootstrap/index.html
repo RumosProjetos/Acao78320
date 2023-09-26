@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+    <title>Gandalf.Inc - Home</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/geral.css" rel="stylesheet" />
+    <script src="../script/geral.js"></script>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" data-unsp-sanitized="clean">Home</a>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  
+                </ul>
+
+                <span class="d-flex">
+                    <img src="../img/logo.png" class="logo logoBootstrap" alt="Logo do Gandalf.Inc" />
+                </span>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-3" data-unsp-sanitized="clean">Gandalf.Inc Backoffice</h1>
+            <p class="lead">Bem vindo ao Backoffice do Gandalf.Inc</p>
+            <hr class="my-4">
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <form>
+                    <div class="card border-primary mb-3">
+                        <div class="card-header">Login</div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label mt-4" for="txtUsuario">Usuário</label>
+                                <input type="text" class="form-control" id="txtUsuario" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label mt-4" for="txtSenha">Senha</label>
+                                <input type="password" class="form-control" id="txtSenha" placeholder="Password">
+                            </div>
+                            <hr />
+                            <div>
+                                <input type="button" class="btn btn-primary" onclick="ValidarUsuario()" id="btnEntrar" name="btnEntrar" value="Entrar" />
+                                <input type="button" class="btn btn-secondary" id="btnCancelar" name="btnCancelar" value="Cancelar" />
+                            </div>
+                            <hr />
+                            <div>
+                                <span>
+                                    <a href="#">Esqueceu a senha?</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top align-bottom">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" data-unsp-sanitized="clean">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">Gandalf.Inc - Todos os direitos reservados</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#" data-unsp-sanitized="clean"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#" data-unsp-sanitized="clean"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#" data-unsp-sanitized="clean"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+﻿<html>
+<head>
+    <title>Gandalf.Inc - Home</title>
+    <link href="../css/geral.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../script/gstatic.com_charts_loader.js"></script>
+    <script src="../script/code.jquery.com_jquery-3.7.0.min.js"></script>
+
+    <!--Usando CDN-->
+    <!--<link href="https://bootswatch.com/5/sandstone/bootstrap.min.css" rel="stylesheet" />-->
+    <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>-->
+    <script src="../script/geral.js"></script>
+</head>
+<body>
+    <script>
+        UsuarioLogado();
+    </script>
+
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" data-unsp-sanitized="clean">Home</a>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html" data-unsp-sanitized="clean">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-unsp-sanitized="clean">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-unsp-sanitized="clean">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-unsp-sanitized="clean">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-unsp-sanitized="clean">Estoques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-unsp-sanitized="clean">Lojas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-unsp-sanitized="clean">Usuários</a>
+                    </li>
+                </ul>
+
+                <span class="d-flex">
+                    <img src="../img/logo.png" class="logo logoBootstrap" alt="Logo do Gandalf.Inc" />
+                </span>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-3" data-unsp-sanitized="clean">Gandalf.Inc Backoffice</h1>
+            <p class="lead">Bem vindo ao Backoffice do Gandalf.Inc</p>
+            <hr class="my-4">
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="alert alert-dismissible  alert-danger">
+                    <span id="spanAlerta01"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-dismissible alert-info">
+                    <span id="spanAlerta02"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-dismissible alert-primary">
+                    <span id="spanAlerta03"></span>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-light">
+                    <div class="inner">
+                        <h3 data-unsp-sanitized="clean" id="estPedidos">0</h3>
+                        <p>Pedidos</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a class="small-box-footer" href="pedidos.html" data-unsp-sanitized="clean">
+                        Maiores informações
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-light">
+                    <div class="inner">
+                        <h3 data-unsp-sanitized="clean" id="estClientes">0</h3>
+                        <p>Novos Clientes</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-refresh"></i>
+                    </div>
+                    <a class="small-box-footer" href="clientes.html" data-unsp-sanitized="clean">
+                        More info
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-light">
+                    <div class="inner">
+                        <h3 data-unsp-sanitized="clean" id="estEstoques">0</h3>
+                        <p>Estoques</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                    <a class="small-box-footer" href="estoques.html" data-unsp-sanitized="clean">
+                        More info
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-light">
+                    <div class="inner">
+                        <h3 data-unsp-sanitized="clean" id="estProdutos">0</h3>
+                        <p>Produtos</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a class="small-box-footer" href="produtos.html" data-unsp-sanitized="clean">
+                        More info
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="small-box bg-light-subtle grafico" id="graficoVendas"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="small-box bg-light-subtle grafico" id="graficoNovosClientes"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" data-unsp-sanitized="clean">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">Gandalf.Inc - Todos os direitos reservados</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#" data-unsp-sanitized="clean"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#" data-unsp-sanitized="clean"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#" data-unsp-sanitized="clean"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+    </footer>
+
+
+    <script>
+        ObterAlertas();
+        ObterEstatisticasBootstrap();
+        ObterGraficoVendas();
+        ObterGraficoNovosClientes();
+    </script>
+
+</body>
+</html>

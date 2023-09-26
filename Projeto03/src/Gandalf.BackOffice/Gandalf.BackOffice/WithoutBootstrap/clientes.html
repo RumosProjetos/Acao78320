@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Gandalf.Inc - Clientes</title>
+    <link href="../css/geral.css" rel="stylesheet" />
+    <script src="../script/geral.js"></script>
+</head>
+<body>
+    <script>
+        UsuarioLogado();
+    </script>
+
+    <nav>
+        <div>
+            <span class="titulo">
+                Gandalf.Inc Backoffice
+            </span>
+            <span>
+                <img src="../img/logo.jpg" class="logo" alt="Logo do Gandalf.Inc" />
+            </span>
+        </div>
+    </nav>
+    <main>
+        <h1>Clientes</h1>
+
+        <table id="tblClientes" border="1">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Data Nascimento
+                </th>
+                <th>
+                    Endereço
+                </th>
+                <th>
+                    Cidade
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    NIF
+                </th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+        </table>
+
+        <nav>
+            <span>Primeira</span>
+            <span>Anterior</span>
+            <span>Próxima</span>
+            <span>Última</span>
+        </nav>
+
+        <input type="button" value="Novo Cliente" onclick="window.location.href='novoCliente.html'" />
+
+    </main>
+
+    <footer>
+        Gandalf.Inc - Todos os direitos reservados
+    </footer>
+
+    <script>
+        var dados = ObterClientes();
+        FormatarClientes(dados);
+    </script>
+
+
+</body>
+</html>
