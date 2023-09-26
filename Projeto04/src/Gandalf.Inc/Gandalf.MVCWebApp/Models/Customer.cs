@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Gandalf.MVCWebApp.Models;
 
@@ -15,8 +16,13 @@ public partial class Customer
 
     public string? Email { get; set; }
 
+    [Required(ErrorMessage = "Ops, o NIF é obrigatório")]
+    [RegularExpression(@"\d{9}", ErrorMessage = "NIF inválido")]
+    [Display(Name = "Número de Identificação Fiscal")]
     public string NumeroIdentificacaoFiscal { get; set; } = null!;
 
+
+    [Display(Name = "Data de Nascimento")]
     public DateTime DataNascimento { get; set; }
 
     public virtual ICollection<Venda> Venda { get; set; } = new List<Venda>();

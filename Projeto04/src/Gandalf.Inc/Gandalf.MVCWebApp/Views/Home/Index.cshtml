@@ -6,3 +6,24 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+<div class="jumbotron">
+  <h1 class="display-4" data-unsp-sanitized="clean">Gandalf.Inc!</h1>
+  <p class="lead">PDV da Loja Gandalf.</p>
+  <hr class="my-4">
+</div>
+
+
+@{
+    var horaAtual = DateTime.Now.Hour;
+    var mensagem = "Boa tarde";
+    if(horaAtual >= 0 && horaAtual <= 12)
+    {
+        mensagem = "Bom dia";
+    }
+}
+
+<div class="alert alert-dismissible alert-warning">
+    <h4 class="alert-heading" data-unsp-sanitized="clean">@mensagem</h4>    
+</div>

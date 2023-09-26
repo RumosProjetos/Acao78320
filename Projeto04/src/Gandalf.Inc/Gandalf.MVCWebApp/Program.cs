@@ -1,7 +1,15 @@
+using Gandalf.MVCWebApp.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("GandalfDB");
+builder.Services.AddDbContext<SqldbProjeto4Context>(x => x.UseSqlServer(connectionString));
+
+
 
 var app = builder.Build();
 
