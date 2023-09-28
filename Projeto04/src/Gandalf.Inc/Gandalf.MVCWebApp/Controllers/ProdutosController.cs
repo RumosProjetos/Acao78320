@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Gandalf.MVCWebApp.Models;
+using Gandalf.MVCWebApp.Dto;
 
 namespace Gandalf.MVCWebApp.Controllers
 {
@@ -178,5 +179,6 @@ namespace Gandalf.MVCWebApp.Controllers
         {
           return (_context.Produtoes?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
     }
-}
+}          
