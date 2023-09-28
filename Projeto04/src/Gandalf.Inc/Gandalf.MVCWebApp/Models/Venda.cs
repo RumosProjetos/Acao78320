@@ -9,9 +9,9 @@ public partial class Venda
 
     public string? NumeroFatura { get; set; }
 
-    public DateTime DataCriacao { get; set; }
+    public DateTime? DataCriacao { get; set; }
 
-    public DateTime DataModificacao { get; set; }
+    public DateTime? DataModificacao { get; set; }
 
     public bool Pago { get; set; }
 
