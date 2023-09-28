@@ -4,6 +4,14 @@ using System.Diagnostics;
 
 namespace Gandalf.MVCWebApp.Controllers
 {
+    public class ProdutoSemanaDto
+    {
+        public string? Nome { get; set; }
+        public int QuantidadeVendida { get; set; }
+        public decimal PrecoUnitario { get; set; }
+        public decimal ValorTotalVendido => PrecoUnitario * QuantidadeVendida;
+    }
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -15,6 +23,15 @@ namespace Gandalf.MVCWebApp.Controllers
 
         public IActionResult Index()
         {
+            var produtoSeman = new ProdutoSemanaDto
+            {
+                Nome = "Espada",
+                PrecoUnitario = 1000M,
+                QuantidadeVendida = 10
+            };
+
+            ViewBag.ProdutoSemana = produtoSeman;
+
             return View();
         }
 

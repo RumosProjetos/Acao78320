@@ -9,21 +9,61 @@
 
 
 <div class="jumbotron">
-  <h1 class="display-4" data-unsp-sanitized="clean">Gandalf.Inc!</h1>
-  <p class="lead">PDV da Loja Gandalf.</p>
-  <hr class="my-4">
+    <h1 class="display-4" data-unsp-sanitized="clean">Gandalf.Inc!</h1>
+    <p class="lead">PDV da Loja Gandalf.</p>
+    <hr class="my-4">
 </div>
 
 
 @{
     var horaAtual = DateTime.Now.Hour;
     var mensagem = "Boa tarde";
-    if(horaAtual >= 0 && horaAtual <= 12)
+    if (horaAtual >= 0 && horaAtual <= 12)
     {
         mensagem = "Bom dia";
     }
 }
 
 <div class="alert alert-dismissible alert-warning">
-    <h4 class="alert-heading" data-unsp-sanitized="clean">@mensagem</h4>    
+    <h4 class="alert-heading" data-unsp-sanitized="clean">@mensagem</h4>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary" >
+            <div class="card-header">Produto da Semana</div>
+            <div class="card-body">
+                <h4 class="card-title" data-unsp-sanitized="clean">@ViewBag.ProdutoSemana.Nome</h4>
+                <p class="card-text">
+                    @ViewBag.ProdutoSemana.QuantidadeVendida <br />
+                    @ViewBag.ProdutoSemana.PrecoUnitario.ToString("C3", System.Globalization.CultureInfo.CurrentCulture)<br />
+                    @ViewBag.ProdutoSemana.ValorTotalVendido.ToString("C3", System.Globalization.CultureInfo.CurrentCulture)<br />
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-secondary">
+            <div class="card-header">Destaques de hoje</div>
+            <div class="card-body">
+                <h4 class="card-title" data-unsp-sanitized="clean">Secondary card title</h4>
+                <p class="card-text">
+                    Prod 1 <br />
+                    Prod 2<br />
+                    Prod 3 <br />
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-success" >
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title" data-unsp-sanitized="clean">Success card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+
 </div>
